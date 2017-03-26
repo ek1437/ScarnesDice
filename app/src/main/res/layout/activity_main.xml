@@ -22,11 +22,11 @@
 
     <ImageView
         android:id="@+id/imageViewDice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/UIButtonHold"
-        app:layout_constraintRight_toRightOf="@+id/UIButtonHold"
+        android:layout_width="220dp"
+        android:layout_height="232dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scoreTextView"
         app:srcCompat="@drawable/dice1"
         tools:layout_constraintLeft_creator="1"
@@ -42,28 +42,31 @@
         android:text="ROLL"
         app:layout_constraintBaseline_toBaselineOf="@+id/UIButtonHold"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1" />
+        tools:layout_constraintBaseline_creator="1" />
 
     <Button
         android:id="@+id/UIButtonHold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="HOLD"
-        app:layout_constraintLeft_toRightOf="@+id/UIButtonRoll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewDice"
         tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
 
     <Button
         android:id="@+id/UIButtonReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="RESET"
         app:layout_constraintBaseline_toBaselineOf="@+id/UIButtonHold"
-        app:layout_constraintLeft_toRightOf="@+id/UIButtonHold"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1" />
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBaseline_creator="1" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -78,24 +81,27 @@
         android:id="@+id/computerStatusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="189dp"
+        android:layout_marginBottom="43dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="41dp"
         android:text="Computer Status"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/userStatusTextView"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_constraintBottom_creator="1" />
+        app:layout_constraintTop_toBottomOf="@+id/UIButtonRoll"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
         android:id="@+id/userStatusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="35dp"
         android:text="User status"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/computerStatusTextView"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintBottom_creator="1" />
 
 </android.support.constraint.ConstraintLayout>

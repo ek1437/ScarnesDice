@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void updateScore() {
         TextView scoreTextView = (TextView) findViewById(R.id.scoreTextView);
-        scoreTextView.setText("Your score: " + userOverallScore + " Computer score: " + computerOverallScore + "\n"
-                + "User turn score: " + userTurnScore + " Computer turn score: " + computerTurnScore);
+        scoreTextView.setText("Your score: " + userOverallScore + "           |  Computer score: " + computerOverallScore + "\n"
+                + "User turn score: " + userTurnScore + "   |  Computer turn score: " + computerTurnScore);
     }
 
     private void doStuff() {
@@ -75,11 +75,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void computerTurn() {
-        //disable buttons
-        holdButton.setEnabled(false);
-        rollButton.setEnabled(false);
         boolean computerSawOne = false;
         while (computerTurnScore < 20) {
+            holdButton.setEnabled(false);
+            rollButton.setEnabled(false);
             int randomNumber = rollTheDie();
             if (randomNumber != 1) {
                 computerTurnScore += randomNumber;
@@ -133,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                     userTurnScore = 0;
                     updateScore();
                     computerTurn();
-                    userStatus.setText("User roled a one");
+                    userStatus.setText("User rolled a one");
                 }
             }
         });
